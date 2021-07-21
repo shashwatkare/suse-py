@@ -7,7 +7,7 @@ from datetime import datetime
 
 from flask import Flask
 
-from src.custom_logger import console_logger
+from custom_logger import console_logger
 
 console_logger()
 # app = bottle.Bottle()

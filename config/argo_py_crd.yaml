@@ -9,4 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path:
+    path: config
+    repoURL: https://github.com/shashwatkare/suse-py
+    targetRevision: HEAD
+  syncPolicy: {}

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: suse-py-actions
+    tag: v1
+  name: suse-py-app
+  namespace: argocd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: suse-py-actions
+      tag: v1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: suse-py-actions
+        tag: v1
+    spec:
+      containers:
+      - image: shashwatk/suse-py-actions:v1
+        imagePullPolicy: IfNotPresent
+        name: suse-py-actions

@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1aplha1
+kind: application
+metadata:
+  name: suse-py-actions
+  namespace: argocdb
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path:

@@ -1,0 +1,8 @@
+apiVersion: v1
+name: suse-py-actions-
+description: SUSE python app tests
+version: 1.0.0
+maintainers:
+  -
+    name: shashwatk
+    email: skare

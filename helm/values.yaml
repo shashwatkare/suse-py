@@ -1,0 +1,8 @@
+namespace:
+  name: test
+
+image:
+  repository: shashwatk/suse-py-actions:v3
+  tag: v3.0.0
+
+replicaCount: 3

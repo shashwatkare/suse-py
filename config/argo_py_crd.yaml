@@ -1,15 +1,17 @@
-apiVersion: argoproj.io/v1aplha1
-kind: application
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: suse-py-actions
-  namespace: argocdb
+  namespace: argocd
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: config
+    valueFiles:
+      - values.yaml
+    path: helm
     repoURL: https://github.com/shashwatkare/suse-py
     targetRevision: HEAD
   syncPolicy: {}

@@ -9,7 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    valueFiles:
+    helm:
+      valueFiles:
       - values.yaml
     path: helm
     repoURL: https://github.com/shashwatkare/suse-py
